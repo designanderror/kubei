@@ -19,6 +19,7 @@ require (
 	k8s.io/apimachinery v0.18.1
 	k8s.io/client-go v11.0.0+incompatible
 	k8s.io/kubernetes v1.21.2
+	cloud.google.com/go v0.51.0 //indirect
 )
 
 // kubernetes v1.18.1
@@ -45,4 +46,5 @@ replace (
 	k8s.io/legacy-cloud-providers => k8s.io/legacy-cloud-providers v0.18.1
 	k8s.io/metrics => k8s.io/metrics v0.18.1
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.18.1
+	k8s.io/component-helpers => k8s.io/component-helpers v0.20.2
 )
