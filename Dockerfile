@@ -1,9 +1,9 @@
-FROM golang:1.14.4-alpine AS builder
+FROM golang:1.16.5-alpine3.14 AS builder
 WORKDIR /go/src/gitlab.com/portshift/kubei/
 COPY ./ ./
 RUN CGO_ENABLED=0 go build -o kubei ./cmd/kubei/
 
-FROM alpine:3.11.3
+FROM alpine:3.13.5
 RUN apk add --no-cache bash ca-certificates
 RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 RUN mkdir /app
